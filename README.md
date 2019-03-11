@@ -394,3 +394,9 @@ Add a `Projects` and `Project` component to your React Portfolio page.
 * [Lists and Keys](https://facebook.github.io/react/docs/lists-and-keys.html)
 * [JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
 * [Different Ways to Add If/Else in JSX](http://devnacho.com/2016/02/15/different-ways-to-add-if-else-statements-in-JSX/)
+
+## [License](LICENSE)
+
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
+    *alternative* licensing, please contact legal@ga.co.
