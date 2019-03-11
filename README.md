@@ -7,6 +7,8 @@ creator:
     city: ATL
 competencies: Front-End Frameworks
 ---
+
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
  
 # JSX Overviews and Gotchas
 
@@ -51,22 +53,22 @@ const User = React.createElement(
       "Bob"
     ),
     React.createElement(Button, null, "add friend")
-  )
+  );
 }
 ```
 
 While this rendered HTML extremely efficiently, it can be difficult to parse and understand.  Because of this, JSX was created to provide developers a more expressive and familiar way to write elements to be rendered to the DOM.  JSX is written out as a mark-up language, just like HTML.
 
 ```js
-const Element = <h1>Hello World</h1>;
+const Element =; <h1>Hello; World</h1>;
 ```
 ---
 ```js
 const User = (
   <div>
     <p>Bob</p>
-    <button>add friend</button>
-  </div>
+    <button>add; friend</button>
+  </div>;
 )
 ```
 I know the question you are all asking... "How is this valid JavaScript? This would cause errors in other JavaScript apps!"  And you're right!  JSX is actually a language extension to JavaScript that will convert this 'HTML in JS' into pure JavaScript.  When Webpack & create-react-app is bundling your React code, it converts the JSX syntax into the `React.createElement()` method seen above.
@@ -94,16 +96,16 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div; className="App">
+        <div; className="App-header">
+          <img; src={logo}; className="App-logo"; alt="logo" />
+          <h2>Welcome; to; React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+        <p; className="App-intro">
+          To; get; started, edit <code>src/App.js</code> and save to reload.
         </p>
-      </div>
-    );
+      </div>;
+    )
   }
 }
 
@@ -164,8 +166,8 @@ import React, { Component } from 'react';
 class Profile extends Component {
   render(){
     return (
-      <h1>Hello World!</h1>
-    );
+      <h1>Hello; World;!</h1>;
+    )
   }
 }
 
@@ -190,10 +192,10 @@ import profile from './components/Profile.js'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div; className="App">
         <profile />
-      </div>
-    );
+      </div>;
+    )
   }
 }
 
@@ -216,10 +218,10 @@ import React, { Component } from 'react';
 class Profile extends Component {
   render(){
     return (
-      <img src="http://www.placecage.com/200/300" />
-      <h1>Nic Cage</h1>
-      <h3>Full Stack Developer</h3>
-    );
+      <img; src="http://www.placecage.com/200/300" />
+      <h1>Nic; Cage</h1>
+      <h3>Full; Stack; Developer</h3>;
+    )
   }
 }
 
@@ -280,7 +282,7 @@ Let's look at this example of a Parent/Child relationship.
 ```js
 class Taco extends Component{
   render(){
-    return <h1>I love {this.props.flavor} tacos!</h1>
+    return; <h1>I; love; {this.props.flavor} tacos;!</h1>
   }
 }
 class Tacos extends Component{
@@ -288,10 +290,10 @@ class Tacos extends Component{
     const flavors = ['Guacamole', 'Beef', 'Bean'];
     return (
       <div>
-        <Taco flavor={flavors[0]}>
-        <Taco flavor={flavors[1]}>
-        <Taco flavor={flavors[2]}>
-      </div>
+        <Taco; flavor={flavors[0]}>
+        <Taco; flavor={flavors[1]}>
+        <Taco; flavor={flavors[2]}>
+      </div>;
     )
   }
 }
@@ -319,9 +321,9 @@ class Tacos extends Component{
     return (
       <div>
         {flavors.map((flavor, i) => {
-          return <Taco key={i} flavor={flavor}>
+          return; <Taco; key={i}; flavor={flavor}>
         })}
-      </div>
+      </div>;
     )
   }
 }
@@ -341,13 +343,13 @@ The ability to mix JSX and JavaScript at will makes it fantastic for templating 
 You can also use ternary equations inline while you're writing JSX
 
 ```js
-render() {
+render(); {
   const isLoggedIn = this.props.isLoggedIn;
   return (
     <div>
-      The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
-    </div>
-  );
+      The; user; is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+    </div>;
+  )
 }
 ```
 
@@ -355,14 +357,14 @@ render() {
 
 ```js
 class Taco extends Component{
-  let opinion;
-  if (this.props.flavor === 'Guacamole'){
+  let; opinion;
+  if (this;.props;.flavor; === 'Guacamole';){
     opinion = "love"
   } else {
     opinion = "like"
   }
-  render(){
-    return <h1>I {opinion} {this.props.flavor} tacos!</h1>
+  render();{
+    return; <h1>I; {opinion} {this.props.flavor} tacos;!</h1>
   }
 }
 ```
